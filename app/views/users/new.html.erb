@@ -1,0 +1,25 @@
+<div class="user-form">
+<div class="form-head">
+  <h2 class="signup">sign up</h2>
+  <p class="login"><a href="<%= new_session_url %>">or log in</a></p>  
+</div>
+
+<form action="/users" method="post" onsubmit="return checkForm();">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <div class="form-group">
+    <br>
+    <input placeholder="Username" id="user-email" name="user[email]" type="text" class="form-control">
+  </div>
+  <div class="form-group form">
+    <input placeholder="Password" id="user-password" name="user[password]" type="password" class="form-control"><br>
+  </div>
+    <input type="submit" value="Submit" class="btn btn-primary"><br>
+</form>
+
+<form action="/session" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="user[email]" value="Guest">
+  <input type="hidden" name="user[password]" value="Guestpassword">
+  <input type="submit" value="Try Demo" class="btn demo">
+</form>
+</div>

@@ -1,0 +1,10 @@
+<div class="show-card" data-card-id="<%= card.id %>">
+  <button class="destroy destroy-card"><span class="glyphicon glyphicon-remove"></span></button>
+  <% if (card.escape("description") === "crossed") { %>
+  	<p style="text-decoration: line-through;"><button class="crossed">
+  <% } else { %>
+  	<p><button class="crossoff">
+  <% } %>
+  	<span class="glyphicon glyphicon-ok"></span></button><%= card.escape("title") %>
+  	</p>
+</div>

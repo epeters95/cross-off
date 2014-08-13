@@ -1,0 +1,17 @@
+  <button class="destroy destroy-list"><span class="glyphicon glyphicon-remove"></span></button>
+  <h3 class="title">
+  <% var crossed = false %>
+  <!-- Feature to be completed -->
+  <% list.cards().each(function(card) { %>
+  	<% if (card.get("description") !== "crossed") { crossed = false } %>
+  <% }) %>
+  <% if (crossed) { %>
+  	<h3 style="text-decoration: line-through;">
+  <% } else { %>
+  	<h3>
+  <% } %>
+  <%= list.escape("title") %></h3>
+  <div class="cards">
+  </div>
+  <br>
+  <div class="card-new"></div>

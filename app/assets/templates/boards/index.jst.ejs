@@ -1,0 +1,11 @@
+<h1>Projects</h1>
+
+<div class="board-index">
+<ul class="board-index">
+<% _(boards.models).each(function(board) { %>
+  <a class="board-link" href="#/boards/<%= board.id %>"><%= board.escape("title") %></a>
+  <br>
+<% }) %>
+</ul>
+</div>
+<div class="board-new"></div>

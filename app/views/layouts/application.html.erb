@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trello Clone</title>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <% if !signed_in? %>
+  <div class="shadow-line"></div>
+  <% end %>
+  <div class="container">
+
+  	<% if !signed_in? %>
+  	<div class="row">
+  		<div class="col-xs-6">
+        <img class="logo" src="/images/crossoff2.png">
+      </div>
+  		<div class="col-xs-6">
+	  		<%= yield %>
+	  	</div>
+  	</div>
+  	<% else %>
+
+  		<%= yield %>
+  	<% end %>
+  </div>
+  <%= render partial: "layouts/header" if signed_in? %>
+  <div id="main"></div>
+</body>
+</html>

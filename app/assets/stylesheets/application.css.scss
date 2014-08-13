@@ -1,0 +1,429 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require jquery.ui.all
+ *= require_tree .
+ */
+
+@import "bootstrap";
+@import "font-awesome";
+@import url(http://fonts.googleapis.com/css?family=Convergence|Marmelad|Raleway:400,600);
+
+body {
+  background-image: url('tweed.png');
+  background-repeat: repeat;
+  background-color: #751923;
+  font-family: 'Marmelad', serif;
+
+}
+
+a {
+  color: #e54558;
+}
+
+a:hover {
+  color: #ff7182;
+  text-decoration: none;
+}
+
+p {
+  font-size: 12pt;
+}
+
+h1 {
+  margin-top: 60px;
+  margin-bottom: 30px;
+  margin-left: 25%;
+  color: #e2d1d3;
+}
+
+h2 {
+  color: #e2d1d3;
+  font-size: 24pt;
+}
+
+h3 {
+  color: #e2d1d3;
+  font-size: 18pt;
+  margin-left: 10px;
+}
+
+img.logo {
+  display: block;
+  margin: 0 auto;
+  margin-top: 55px;
+  opacity: 0.35;
+  width: 80%;
+}
+
+div.logo-head {
+  width: 180px;
+  height: 0px;
+  margin: 0 auto;
+  margin-bottom: 0px;
+}
+
+img.logo-head {
+  width: 100%;
+  display: inline;
+  opacity: 0.35;
+}
+
+div.shadow-line {
+  height: 1px;
+  width: 100%;
+  box-shadow: 0px 0px 160px 30px #000000;
+}
+
+div.form-head h2 {
+  font-family: 'Marmelad';
+  color: #e2d1d3;
+}
+
+div.form-head {
+  height: 20px;
+  margin-bottom: 20px;
+  vertical-align: bottom;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+div.form-head .signup {
+  float: left;
+  display: inline;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  vertical-align: bottom;
+}
+
+div.form-head .login {
+  float: right;
+  display: inline;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+div.form-head p.login {
+  margin-top: 10px;
+}
+
+div.form-head p.signup {
+  margin-top: 10px;
+}
+
+div.user-form {
+  float: right;
+  width: 100%;
+  padding-right: 10%;
+  padding-left: 10%;
+}
+
+.btn {
+  margin: 0 auto;
+  float: none;
+  display: block;
+  width: 40%;
+  background-color: #cc3143;
+  border-width: 0px;
+  color: #e55566;
+  transition: all 0.1s ease-in-out;
+}
+
+.btn.btn-primary {
+  color: #FFFFFF;
+  float: left;
+  display: inline;
+}
+
+.btn.btn-primary:hover {
+  color: #FFFFFF;
+}
+
+.btn:active {
+  background-color: #cc3143;
+}
+
+.btn.demo {
+  background-color: #6562a8;
+  color: #FFFFFF;
+  float: right;
+  display: inline;
+  margin-top: -20px;
+}
+
+.btn.demo:hover {
+  background-color: #8582c6;
+  color: #FFFFFF;
+}
+
+input.form-control {
+  background-color: rgba(255,255,255,0.8);
+  color: #751923;
+  font-size: 13pt;
+  height: 40px;
+  border-width: 0px;
+}
+
+div.board-new {
+  margin: 0 auto;
+  height: 40px;
+  width: 400px;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+input.board-new {
+  height: 40px;
+  width: 80%;
+  display: inline;
+}
+
+.btn.create {
+  display: inline;
+  float: right;
+  height: 40px;
+  width: 20%;
+  color: #FFFFFF;
+  font-size: 14pt;
+}
+
+input.form-control.new-card {
+  width: 85%;
+  height: 40px;
+  display: inline;
+  float: left;
+}
+
+div.list-new {
+  display: inline;
+  float: left;
+  margin: 20px;
+}
+
+div.list-form {
+  width: 400px;
+}
+
+input.new-list {
+  width: 85%;
+  display: inline;
+  float: left;
+}
+
+.add {
+  width: 15%;
+  height: 40px;
+  float: right;
+  display: inline;
+}
+
+h2.board-show {
+  float: left;
+}
+
+.btn:hover {
+  background-color: #d25362;
+  color: #e5808b;
+}
+
+div.lists {
+  margin-left: -2.5%;
+  margin-right: 2.5%;
+  width: 105%;
+  overflow-x: auto;
+  float: left;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+div.cards {
+  min-height: 10px;
+}
+
+div.show-list {
+  float: left;
+  background-color: #a02b39;
+  border-radius: 6px;
+  padding: 10px;
+  margin: 0px 8px;
+/*  white-space: normal;*/
+/*  vertical-align: top;*/
+  min-width: 340px;
+  max-width: 400px;
+  display: inline-block;
+}
+
+div.show-card {
+  position: relative;
+  background-color: rgba(226, 209, 211, 0.6);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+  padding-bottom: 2px;
+  color: #38050b;
+}
+
+button.destroy {
+  border-width: 0px;
+  background-color: rgba(0, 0, 0, 0);
+  float: right;
+  margin-bottom: -30px;
+  padding-right: 0;
+  transition: all 0.1s ease-in-out;
+}
+
+button.destroy.board {
+  color: #e54558;
+  margin-top: 30px;
+  margin-right: 3%;
+}
+
+button.destroy.board:hover {
+  color: #ff7182;
+}
+
+button.destroy-list {
+  color: #831c28;
+  font-size: 14pt;
+  margin-top: -5px;
+}
+
+button.destroy-list:hover {
+  background-color: #8f212e;
+  color: #751923;
+  border-radius: 4px;
+}
+
+button.destroy-card {
+  color: rgba(56, 5, 11, 0.25);
+}
+
+button.destroy-card:hover {
+  background-color: rgba(56, 5, 11, 0.15);
+  color: rgba(56, 5, 11, 0.3);
+  border-radius: 4px;
+}
+
+span.glyphicon-remove {
+  right: 15%;
+}
+
+button.crossoff {
+  border: 2px solid rgba(56, 5, 11, 0.25);
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 25px;
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+}
+
+button.crossoff:hover {
+  color: rgba(56, 5, 11, 0.25);
+}
+
+button.crossed {
+  border: 2px solid rgba(56, 5, 11, 0.25);
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 25px;
+  color: rgba(0, 100, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0);
+}
+
+div.container {
+  
+  width: 60%;
+  margin-left: 0 auto;
+  margin-right: 0 auto;
+}
+
+div.row {
+  margin-top: 200px;
+}
+
+div#main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+div.header {
+  width: 100%;
+  height: 60px;
+  padding-top: 1px;
+  box-shadow: 0px 0px 140px 3px #000000;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 40px;
+}
+
+div.header h2 {
+  float: right;
+  color: #af7278;
+  padding-right: 7%;
+  font-size: 16pt;
+  margin-top: 14px;
+}
+
+.exit.logout {
+  left: 50px;
+}
+
+.exit {
+  height: 40px;
+  left: 150px;
+  top: 10px;
+  color: #af7278;
+  font-size: 14pt;
+  background-color: rgba(0, 0, 0, 0);
+  border: 3px solid rgba(0, 0, 0, 0);
+  position: absolute;
+}
+
+.exit:hover {
+  color: #9b545b;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+a.board-link {
+  display: block;
+  color: #530c14;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding-top: 25px;
+  padding-bottom: 60px;
+  font-size: 24pt;
+  width: 80%;
+  height: 50px;
+  margin: 0 auto;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  text-align: center;
+  vertical-align: center;
+}
+
+a.board-link:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+ul.board-index {
+  padding: 0;
+}
+
+div.board-index {
+  padding-top: 20px;
+  border-radius: 6px;
+  margin-top: 40px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0);
+  width: 50%;
+  min-width: 480px;
+  /*box-shadow: 0px 0px 70px 15px rgba(0, 0, 0, 0.12);*/
+}
