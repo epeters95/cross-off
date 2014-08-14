@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Trello Clone</title>
+  <title>Cross-Off</title>
   <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -13,12 +13,25 @@
   <div class="container">
 
   	<% if !signed_in? %>
+
   	<div class="row">
   		<div class="col-xs-6">
         <img class="logo" src="/images/crossoff2.png">
       </div>
   		<div class="col-xs-6">
 	  		<%= yield %>
+        <div class="alerts">
+<% if flash[:errors] %>
+  <div class="alert alert-danger alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert">
+      <span aria-hidden="true">&times;</span>
+      <span class="sr-only">Close</span>
+    </button>
+  <%= flash[:errors].join("<br>") %>
+  </div>
+<% end %>
+</div>
+
 	  	</div>
   	</div>
   	<% else %>

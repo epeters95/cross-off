@@ -77,6 +77,14 @@ img.logo-head {
   opacity: 0.35;
 }
 
+div.alerts {
+  height: 30px;
+  margin-top: 250px;
+  width: 80%;
+  margin-left: 10%;
+  color: rgba(100, 0, 0, 0.3) !important;
+}
+
 div.shadow-line {
   height: 1px;
   width: 100%;
@@ -145,6 +153,15 @@ div.user-form {
 
 .btn.btn-primary:hover {
   color: #FFFFFF;
+}
+
+.btn.btn-primary:active {
+  color: #FFFFFF;
+  background-color: #cc3143;
+}
+
+.btn.btn-primary:focus {
+  background-color: #cc3143;
 }
 
 .btn:active {
